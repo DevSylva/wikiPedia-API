@@ -54,7 +54,6 @@ pycparser==2.21
 Pygments==2.11.2
 pyOpenSSL==22.0.0
 pyparsing==3.0.6
-pypiwin32==223
 PySocks==1.7.1
 pyttsx3==2.90
 pytz==2021.3
