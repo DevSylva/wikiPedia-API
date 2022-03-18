@@ -13,7 +13,7 @@ import wikipedia
 def apiRoutes(request):
     routes = [
         'GET /wiki-home-page/',
-        'GET /query/',
+        'POST /query/',
     ]
     return Response(routes, status=status.HTTP_201_CREATED)
 
