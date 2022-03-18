@@ -51,7 +51,7 @@ def query(request):
                 data = result
                 return Response(data, status=status.HTTP_200_OK)
             except:
-                return Response("something went wrong!\n Try changing search query :)", status=status.HTTP_200_OK)
+                return Response("Oops!! something went wrong, Try changing search query :)", status=status.HTTP_200_OK)
         return Response(serializer.errors, status=status.HTTP_400_BAD_REQUEST)
 
 
