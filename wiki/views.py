@@ -42,13 +42,16 @@ def query(request):
         if serializer.is_valid():
             serializer.save()
 
-            q = serializer.data['query']
-            result = wikipedia.summary(q, sentences = 2)
+            try:
+                q = serializer.data['query']
+                result = wikipedia.summary(q, sentences = 2)
 
-            # printing the result
-            print(result)
-            data = result
-            return Response(data, status=status.HTTP_200_OK)
+                # printing the result
+                print(result)
+                data = result
+                return Response(data, status=status.HTTP_200_OK)
+            except e:
+                return Response(e, status=status.HTTP_200_OK)
         return Response(serializer.errors, status=status.HTTP_400_BAD_REQUEST)
 
 
